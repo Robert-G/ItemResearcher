@@ -17,19 +17,19 @@ import javax.swing.JTextField;
 public class SearchTab extends Tab implements KeyListener {
 
 	private static final long serialVersionUID = 2789552137153777618L;
-	private final JTextField field;
+	private final JTextField searchField;
 	private final AutoComplete autoComplete;
 
 	public SearchTab(UserInterface parent) {
 		super(parent);
-		this.field = new JTextField("enter item name here.", 20);
-		this.field.setBounds(282, 10, 210, 15);
-		this.field.selectAll();
-		this.autoComplete = new AutoComplete(field);
-		this.field.getDocument().addDocumentListener(autoComplete);
-		this.field.setToolTipText("Enter item name then press enter.");
-		this.field.addKeyListener(this);
-		this.add(field);
+		this.searchField = new JTextField("enter item name here.", 20);
+		this.searchField.setBounds(282, 10, 210, 15);
+		this.searchField.selectAll();
+		this.autoComplete = new AutoComplete(searchField);
+		this.searchField.getDocument().addDocumentListener(autoComplete);
+		this.searchField.setToolTipText("Enter item name then press enter.");
+		this.searchField.addKeyListener(this);
+		this.add(searchField);
 	}
 	
 	@Override
@@ -53,18 +53,18 @@ public class SearchTab extends Tab implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		if (arg0.getKeyCode() == KeyEvent.VK_ENTER) {
-			final String text = field.getText();
+			final String text = searchField.getText();
 			if (text == null || text.isEmpty()) {
 				return;
 			}
 			final GEItem item = GrandExchange.lookUpItem(text);
 			if (item != null) {
-				super.item = item;
+				this.item = item;
 				repaint();
 			} else {
-				field.setText("Unable to find " + text + ".");
+				searchField.setText("Unable to find " + text + ".");
 			}
-			field.selectAll();
+			searchField.selectAll();
 		}
 	}
 
@@ -74,7 +74,6 @@ public class SearchTab extends Tab implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
-		
 	}
 
 }

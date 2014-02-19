@@ -18,7 +18,7 @@ public class ItemOfTheWeekTab extends Tab {
 
 	public ItemOfTheWeekTab(UserInterface parent) {
 		super(parent);
-		super.item = GrandExchange.getItemOfTheWeek();
+		this.item = GrandExchange.getItemOfTheWeek();
 	}
 	
 	@Override
