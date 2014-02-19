@@ -1,7 +1,7 @@
 package itemresearcher.userinterface.tabs.tab;
 
 import itemresearcher.geitem.GEItem;
-import itemresearcher.methods.MethodContext;
+import itemresearcher.methodcontext.MethodContext;
 import itemresearcher.userinterface.UserInterface;
 
 import java.awt.Font;

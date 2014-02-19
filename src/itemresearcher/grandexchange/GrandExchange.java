@@ -53,7 +53,7 @@ public class GrandExchange {
 				if (!checkedItems.contains(id)) {
 					checkedItems.add(id);
 					final String info = IO.loadText(grandExchangeUrl + id);
-					if (info != null) {
+					if (info != null && !info.isEmpty()) {
 						final GEItem item = new GEItem(info);
 						if (item != null) {
 							cachedItems.put(id, item);

@@ -1,4 +1,4 @@
-package itemresearcher.methods;
+package itemresearcher.methodcontext;
 
 import itemresearcher.fontloader.FontLoader;
 import itemresearcher.imagepool.ImagePool;

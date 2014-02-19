@@ -1,6 +1,6 @@
 package itemresearcher.userinterface;
 
-import itemresearcher.methods.MethodContext;
+import itemresearcher.methodcontext.MethodContext;
 import itemresearcher.userinterface.tabs.ItemOfTheWeekTab;
 import itemresearcher.userinterface.tabs.SearchTab;
 

@@ -32,7 +32,7 @@ public class RunescapeWikia {
 					history.add(itemName);
 					final String url = runescape_wikia_url + itemName.replaceAll(" ", "_");
 					final String loadedText = IO.loadText(url, regex);
-					if (loadedText != null && !loadedText.isEmpty()) {
+					if (loadedText != null && !loadedText.isEmpty() && loadedText.contains(regex)) {
 						try {
 							id = Integer.parseInt(loadedText.replaceAll("\\D", ""));
 							id_cache.put(itemName, id);
