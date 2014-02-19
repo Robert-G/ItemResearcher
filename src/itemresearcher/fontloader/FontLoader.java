@@ -11,23 +11,23 @@ public class FontLoader {
 
 	/**
 	 * 
-	 * @param url
+	 * @param fontName
 	 * @param type
 	 * @param style
 	 * @param size
 	 * @return
 	 */
 	public Font loadFont(String fontName, int type, int style, int size) {
-		Font font = null;
 		try {
-			font = Font.createFont(type, this.getClass().getResourceAsStream("/itemresearcher/fontloader/fonts/" + fontName));
+			Font font = Font.createFont(type, this.getClass().getResourceAsStream("/itemresearcher/fontloader/fonts/" + fontName));
 			font = font.deriveFont(style, size);
 			final GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);
+			return font;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return font;
+		return new Font("Segoe UI Semibold", style, size);
 	}
 	
 }

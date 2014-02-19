@@ -14,8 +14,8 @@ public class RunescapeWikia {
 	
 	private static final String runescape_wikia_url = "http://runescape.wikia.com/wiki/Exchange:";
 	private static final String regex = "<ul><li><b><a href=\"/wiki/Grand_Exchange_Database\" title=\"Grand Exchange Database\">Exchange ID</a>:</b> <span id=\"GEDBID\">";
-	private static final Map<String, Integer> id_cache = new HashMap<String, Integer>();
-	private static final ArrayList<String> history = new ArrayList<String>();
+	private static final Map<String, Integer> id_cache = new HashMap<>();
+	private static final ArrayList<String> history = new ArrayList<>();
 	
 	/**
 	 * 
