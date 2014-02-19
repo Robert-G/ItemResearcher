@@ -7,7 +7,6 @@ import itemresearcher.userinterface.tabs.tab.Tab;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.text.NumberFormat;
 
 /**
  * @author Robert G
@@ -35,7 +34,7 @@ public class ItemOfTheWeekTab extends Tab {
 			g.setFont(font1);
 			g.drawString("Name: " + item.getName(), 5, 60);
 			g.drawString("Id: " + item.getId(), 5, 80);
-			g.drawString("Price: " + NumberFormat.getInstance().format(item.getCurrentPrice()), 5, 100);
+			g.drawString("Price: " + item.getCurrentPrice(), 5, 100);
 			g.drawString("Type: " + item.getType(), 5, 120);
 			g.drawString("Description: " + item.getDescription(), 5, 140);
 		}

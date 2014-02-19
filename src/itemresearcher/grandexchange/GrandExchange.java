@@ -23,16 +23,6 @@ public class GrandExchange {
 	
 	/**
 	 * 
-	 * @param id the id of the item.
-	 * @return the name of the item, unlisted item if item not found.
-	 */
-	public static String getItemName(int id) {
-		final GEItem item = lookUpItem(id);
-		return item != null ? item.getName() : "Unlisted Item";
-	}
-	
-	/**
-	 * 
 	 * @return the item of the week displayed on the grand exchange home page.
 	 */
 	public static GEItem getItemOfTheWeek() {
@@ -42,18 +32,12 @@ public class GrandExchange {
 		return lookUpItem(itemOfTheWeek);
 	}
 	
-	public static int getItemOfTheWeekId() {
-		return itemOfTheWeek;
-	}
-	
 	/**
 	 * 
-	 * @param id the id of the item.
-	 * @return the current Grand exchange price of the item, -1 if not found.
+	 * @return the id of the item of the week
 	 */
-	public static int getItemPrice(int id) {
-		final GEItem item = lookUpItem(id);
-		return item != null ? item.getCurrentPrice() : -1;
+	public static int getItemOfTheWeekId() {
+		return itemOfTheWeek;
 	}
 	
 	/**

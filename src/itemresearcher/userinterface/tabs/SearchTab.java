@@ -11,7 +11,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.text.NumberFormat;
 
 import javax.swing.JTextField;
 
@@ -45,7 +44,7 @@ public class SearchTab extends Tab implements KeyListener {
 			g.drawImage(ctx.imagePool.getImage(item.getLargeIconUrl()), 390, 40, null);
 			g.drawString("Name: " + item.getName(), 5, 60);
 			g.drawString("Id: " + item.getId(), 5, 80);
-			g.drawString("Price: " + NumberFormat.getInstance().format(item.getCurrentPrice()), 5, 100);
+			g.drawString("Price: " + item.getCurrentPrice(), 5, 100);
 			g.drawString("Type: " + item.getType(), 5, 120);
 			g.drawString("Description: " + item.getDescription(), 5, 140);
 		}

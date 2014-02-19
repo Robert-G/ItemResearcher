@@ -13,7 +13,7 @@ public class GEItem {
 	private final String typeIconUrl;
 	private final String name;
 	private final String description;
-	private final int currentPrice;
+	private final String currentPrice;
 	
 	public GEItem(String jsonArray) {
 		this.iconUrl = getString(jsonArray, "\"icon\":\"", "\",\"icon_large\":\"");
@@ -23,7 +23,7 @@ public class GEItem {
 		this.typeIconUrl = getString(jsonArray, "\"typeIcon\":\"", "\",\"name\":");
 		this.name = getString(jsonArray, "\"name\":\"", "\",\"description\":\"");
 		this.description = getString(jsonArray, "\"description\":\"", "\",\"current\":");
-		this.currentPrice = parsePrice(getString(jsonArray, "current\":{\"trend\":\"neutral\",\"price\":", "},\"today\":{"));
+		this.currentPrice = getString(jsonArray, "current\":{\"trend\":\"neutral\",\"price\":", "},\"today\":{").replaceAll("\"", "");
 	}
 	
 	/**
@@ -36,23 +36,6 @@ public class GEItem {
 		final int start = jsonArray.indexOf(startRegex) + startRegex.length();
 		final int end = jsonArray.indexOf(endRegex);
 		return jsonArray.substring(start, end);
-	}
-	
-	/**
-	 * 
-	 * @param priceString
-	 * @return the integer value of priceString.
-	 */
-	private int parsePrice(String priceString) {
-		priceString = priceString.replaceAll("\"", "");
-		if (priceString.contains("k")) {
-			return (int)(Double.parseDouble(priceString.replaceAll("k", " ")) * 1000);
-		} else if (priceString.contains("m")) {
-			return (int)(Double.parseDouble(priceString.replaceAll("m", " ")) * 100000);
-		} else if (priceString.contains("b")) {
-			return (int)(Double.parseDouble(priceString.replaceAll("b", " ")) * 1000000000);
-		}
-		return Integer.parseInt(priceString);
 	}
 	
 	/**
@@ -115,7 +98,7 @@ public class GEItem {
 	 * 
 	 * @return the current price of this item.
 	 */
-	public int getCurrentPrice() {
+	public String getCurrentPrice() {
 		return this.currentPrice;
 	}
 
