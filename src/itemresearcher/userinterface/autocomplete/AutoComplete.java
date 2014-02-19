@@ -34,7 +34,7 @@ public class AutoComplete implements DocumentListener {
 
 	private void loadKeywords() {
 		keywords = new ArrayList<String>();
-		final BufferedReader in = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/itemresearcher/gui/autocomplete/keywords/Keywords.txt")));
+		final BufferedReader in = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/itemresearcher/userinterface/autocomplete/keywords/Keywords.txt")));
 		String input;
 		try {
 			while ((input = in.readLine()) != null) {
