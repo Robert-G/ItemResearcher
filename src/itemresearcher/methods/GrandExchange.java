@@ -1,7 +1,6 @@
-package itemresearcher.grandexchange;
+package itemresearcher.methods;
 
 import itemresearcher.io.IO;
-import itemresearcher.methodcontext.MethodContext;
 
 import java.util.ArrayList;
 import java.util.HashMap;

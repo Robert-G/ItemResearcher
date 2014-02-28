@@ -1,6 +1,6 @@
 package itemresearcher.userinterface.tabs;
 
-import itemresearcher.grandexchange.GrandExchange.GEItem;
+import itemresearcher.methods.GrandExchange.GEItem;
 import itemresearcher.userinterface.UserInterface;
 import itemresearcher.userinterface.autocomplete.AutoComplete;
 import itemresearcher.userinterface.tabs.tab.Tab;
@@ -24,6 +24,11 @@ public class SearchTab extends Tab implements KeyListener {
 	private final JTextField searchField;
 	private final AutoComplete autoComplete;
 
+	/**
+	 * Constructs a new Search tab.
+	 * The search tab is used for searching for items to load their information.
+	 * @param parent the user interface parent of this tab.
+	 */
 	public SearchTab(UserInterface parent) {
 		super(parent);
 		this.searchField = new JTextField("enter item name here.", 20);

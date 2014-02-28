@@ -1,6 +1,6 @@
 package itemresearcher.userinterface;
 
-import itemresearcher.methodcontext.MethodContext;
+import itemresearcher.methods.MethodContext;
 import itemresearcher.userinterface.tabs.ItemOfTheWeekTab;
 import itemresearcher.userinterface.tabs.SearchTab;
 
@@ -23,6 +23,9 @@ public class UserInterface extends JPanel implements Runnable {
 	private final ItemOfTheWeekTab iotwt;
 	private final SearchTab searchTab;
 
+	/**
+	 * Constructs a new user interface.
+	 */
 	public UserInterface() {
 		super(new GridLayout(1, 1));
 		this.ctx = new MethodContext();

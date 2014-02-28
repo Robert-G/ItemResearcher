@@ -1,4 +1,4 @@
-package itemresearcher.runescapewikia;
+package itemresearcher.methods;
 
 import itemresearcher.io.IO;
 

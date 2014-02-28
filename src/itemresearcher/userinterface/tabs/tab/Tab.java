@@ -1,7 +1,7 @@
 package itemresearcher.userinterface.tabs.tab;
  
-import itemresearcher.grandexchange.GrandExchange.GEItem;
-import itemresearcher.methodcontext.MethodContext;
+import itemresearcher.methods.MethodContext;
+import itemresearcher.methods.GrandExchange.GEItem;
 import itemresearcher.userinterface.UserInterface;
 
 import java.awt.Font;

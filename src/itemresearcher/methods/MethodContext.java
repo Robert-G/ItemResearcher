@@ -1,9 +1,7 @@
-package itemresearcher.methodcontext;
+package itemresearcher.methods;
 
 import itemresearcher.fontloader.FontLoader;
-import itemresearcher.grandexchange.GrandExchange;
 import itemresearcher.imagepool.ImageCache;
-import itemresearcher.runescapewikia.RunescapeWikia;
 
 /**
  * @author Robert G
