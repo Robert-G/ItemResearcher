@@ -21,8 +21,9 @@ public class AutoComplete implements DocumentListener {
 		INSERT,
 		COMPLETION
 	};
-
-	private JTextField textField;
+	
+	private final String filePath = "/itemresearcher/userinterface/autocomplete/keywords/Keywords.txt";
+	private final JTextField textField;
 	private List<String> keywords;
 	private Mode mode = Mode.INSERT;
 
@@ -34,7 +35,7 @@ public class AutoComplete implements DocumentListener {
 
 	private void loadKeywords() {
 		keywords = new ArrayList<>();
-		final BufferedReader in = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/itemresearcher/userinterface/autocomplete/keywords/Keywords.txt")));
+		final BufferedReader in = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(filePath)));
 		String input;
 		try {
 			while ((input = in.readLine()) != null) {

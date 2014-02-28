@@ -1,6 +1,5 @@
 package itemresearcher.userinterface.tabs;
 
-import itemresearcher.grandexchange.GrandExchange;
 import itemresearcher.userinterface.UserInterface;
 import itemresearcher.userinterface.tabs.tab.Tab;
 
@@ -18,7 +17,7 @@ public class ItemOfTheWeekTab extends Tab {
 
 	public ItemOfTheWeekTab(UserInterface parent) {
 		super(parent);
-		this.item = GrandExchange.getItemOfTheWeek();
+		this.item = ctx.grandExchange.getItemOfTheWeek();
 	}
 	
 	@Override

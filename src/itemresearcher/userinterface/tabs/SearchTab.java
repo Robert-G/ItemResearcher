@@ -1,7 +1,6 @@
 package itemresearcher.userinterface.tabs;
 
-import itemresearcher.geitem.GEItem;
-import itemresearcher.grandexchange.GrandExchange;
+import itemresearcher.grandexchange.GrandExchange.GEItem;
 import itemresearcher.userinterface.UserInterface;
 import itemresearcher.userinterface.autocomplete.AutoComplete;
 import itemresearcher.userinterface.tabs.tab.Tab;
@@ -11,9 +10,14 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.regex.Pattern;
 
 import javax.swing.JTextField;
 
+/**
+ * @author Robert G
+ *
+ */
 public class SearchTab extends Tab implements KeyListener {
 
 	private static final long serialVersionUID = 2789552137153777618L;
@@ -57,7 +61,11 @@ public class SearchTab extends Tab implements KeyListener {
 			if (text == null || text.isEmpty()) {
 				return;
 			}
-			final GEItem item = GrandExchange.lookUpItem(text);
+			int id = -1;
+			if (Pattern.matches("\\d+", text)) {
+				id = Integer.parseInt(text);
+			}
+			final GEItem item = ctx.grandExchange.lookUpItem((id != -1 ? id : text));
 			if (item != null) {
 				this.item = item;
 				repaint();

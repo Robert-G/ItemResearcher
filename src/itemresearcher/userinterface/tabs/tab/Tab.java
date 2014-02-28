@@ -1,6 +1,6 @@
 package itemresearcher.userinterface.tabs.tab;
-
-import itemresearcher.geitem.GEItem;
+ 
+import itemresearcher.grandexchange.GrandExchange.GEItem;
 import itemresearcher.methodcontext.MethodContext;
 import itemresearcher.userinterface.UserInterface;
 

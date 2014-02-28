@@ -11,6 +11,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
+/**
+ * @author Robert G
+ *
+ */
 public class UserInterface extends JPanel implements Runnable {
 
 	private static final long serialVersionUID = 1L;

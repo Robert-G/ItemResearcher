@@ -12,17 +12,18 @@ import java.util.Map;
  */
 public class RunescapeWikia {
 	
-	private static final String runescape_wikia_url = "http://runescape.wikia.com/wiki/Exchange:";
-	private static final String regex = "<ul><li><b><a href=\"/wiki/Grand_Exchange_Database\" title=\"Grand Exchange Database\">Exchange ID</a>:</b> <span id=\"GEDBID\">";
-	private static final Map<String, Integer> id_cache = new HashMap<>();
-	private static final ArrayList<String> history = new ArrayList<>();
+	private final String runescape_wikia_url = "http://runescape.wikia.com/wiki/Exchange:";
+	private final String regex = "<ul><li><b><a href=\"/wiki/Grand_Exchange_Database\" title=\"Grand Exchange Database\">Exchange ID</a>:</b> <span id=\"GEDBID\">";
+	private final Map<String, Integer> id_cache = new HashMap<>();
+	private final ArrayList<String> history = new ArrayList<>();
 	
 	/**
+	 * Loads the id of the item with the specified name.
 	 * 
 	 * @param itemName the name of the item
 	 * @return the id of the item, -1 if item not found.
 	 */
-	public static int getItemId(String itemName) {
+	public int getItemId(String itemName) {
 		int id = -1;
 		if (itemName != null && !itemName.isEmpty()) {
 			if (id_cache.get(itemName) != null) {
