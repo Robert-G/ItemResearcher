@@ -36,7 +36,7 @@ public class SearchTab extends Tab implements KeyListener {
 		this.searchField.selectAll();
 		this.autoComplete = new AutoComplete(searchField, ctx);
 		this.searchField.getDocument().addDocumentListener(autoComplete);
-		this.searchField.setToolTipText("Enter item name then press enter.");
+		this.searchField.setToolTipText("Enter item name or id then press enter.");
 		this.searchField.addKeyListener(this);
 		this.add(searchField);
 	}

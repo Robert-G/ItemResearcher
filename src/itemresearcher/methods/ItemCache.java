@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ItemCache {
 
-	private final String filePath = "/itemresearcher/resources/itemList.txt";
+	private final String filePath = "/itemresearcher/resources/itemlist/itemlist.txt";
 	private final ArrayList<CacheItem> cache = new ArrayList<>();
 	
 	public ItemCache() {

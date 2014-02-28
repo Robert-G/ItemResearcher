@@ -1,4 +1,4 @@
-package itemresearcher.fontloader;
+package itemresearcher.methods;
 
 import java.awt.Font;
 import java.awt.GraphicsEnvironment;
@@ -9,7 +9,7 @@ import java.awt.GraphicsEnvironment;
  */
 public class FontLoader {
 	
-	private final String filePath = "/itemresearcher/fontloader/fonts/";
+	private final String filePath = "/itemresearcher/resources/fonts/";
 
 	/**
 	 * Loads the specified font with the specified type, style and size.

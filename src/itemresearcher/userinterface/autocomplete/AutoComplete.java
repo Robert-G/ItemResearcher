@@ -34,7 +34,6 @@ public class AutoComplete implements DocumentListener {
 	
 	private void loadKeywords(MethodContext ctx) {
 		for (CacheItem item : ctx.itemCache.getCache()) {
-			System.out.println("added " + item.getName());
 			keywords.add(item.getName().toLowerCase());
 		}
 	}

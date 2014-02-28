@@ -1,6 +1,5 @@
 package itemresearcher.methods;
 
-import itemresearcher.io.IO;
 import itemresearcher.methods.ItemCache.CacheItem;
 
 import java.util.ArrayList;

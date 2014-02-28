@@ -1,7 +1,5 @@
 package itemresearcher.methods;
 
-import itemresearcher.fontloader.FontLoader;
-import itemresearcher.imagepool.ImageCache;
 
 /**
  * @author Robert G

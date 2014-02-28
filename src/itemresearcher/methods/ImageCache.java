@@ -1,4 +1,4 @@
-package itemresearcher.imagepool;
+package itemresearcher.methods;
 
 import java.awt.Image;
 import java.net.URL;
