@@ -1,6 +1,7 @@
 package itemresearcher.methods;
 
 import itemresearcher.io.IO;
+import itemresearcher.methods.ItemCache.CacheItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,8 +14,6 @@ import java.util.Map;
  */
 public class GrandExchange {
 	
-	private final MethodContext ctx;
-	
 	public GrandExchange(MethodContext ctx) {
 		this.ctx = ctx;
 	}
@@ -23,6 +22,7 @@ public class GrandExchange {
 	private final String frontpageUrl = "http://services.runescape.com/m=itemdb_rs/frontpage.ws";
 	private final Map<Integer, GEItem> cachedItems = new HashMap<>();
 	private final List<Integer> checkedItems = new ArrayList<>();
+	private final MethodContext ctx;
 	private int itemOfTheWeek = -1;
 	
 	/**
@@ -78,10 +78,9 @@ public class GrandExchange {
 	 * @return a GEItem containing the items price, name and id, null if item not found.
 	 */
 	public GEItem lookUpItem(String itemName) {
-		final int id = ctx.runescapeWikia.getItemId(itemName);
-		return id != -1 ? lookUpItem(id) : null;
+		final CacheItem item = ctx.itemCache.loadCacheItem(itemName);
+		return item != null ? lookUpItem(item.getId()) : null;
 	}
-	
 	
 	public GEItem lookUpItem(Object object) {
 		if (object instanceof String) {
@@ -102,26 +101,14 @@ public class GrandExchange {
 		private final String currentPrice;
 		
 		private GEItem(String jsonArray) {
-			this.iconUrl = getString(jsonArray, "\"icon\":\"", "\",\"icon_large\":\"");
-			this.largeIconUrl = getString(jsonArray, "\"icon_large\":\"", "\",\"id\":");
-			this.id = Integer.parseInt(getString(jsonArray, "\",\"id\":", ",\"type\":"));
-			this.type = getString(jsonArray, "\"type\":\"", "\",\"typeIcon\":");
-			this.typeIconUrl = getString(jsonArray, "\"typeIcon\":\"", "\",\"name\":");
-			this.name = getString(jsonArray, "\"name\":\"", "\",\"description\":\"");
-			this.description = getString(jsonArray, "\"description\":\"", "\",\"current\":");
-			this.currentPrice = getString(jsonArray, "current\":{\"trend\":\"neutral\",\"price\":", "},\"today\":{").replaceAll("\"", "");
-		}
-		
-		/**
-		 * 
-		 * @param startRegex
-		 * @param endRegex
-		 * @return
-		 */
-		private String getString(String jsonArray, String startRegex, String endRegex) {
-			final int start = jsonArray.indexOf(startRegex) + startRegex.length();
-			final int end = jsonArray.indexOf(endRegex);
-			return jsonArray.substring(start, end);
+			this.iconUrl = Strings.getString(jsonArray, "\"icon\":\"", "\",\"icon_large\":\"");
+			this.largeIconUrl = Strings.getString(jsonArray, "\"icon_large\":\"", "\",\"id\":");
+			this.id = Integer.parseInt(Strings.getString(jsonArray, "\",\"id\":", ",\"type\":"));
+			this.type = Strings.getString(jsonArray, "\"type\":\"", "\",\"typeIcon\":");
+			this.typeIconUrl = Strings.getString(jsonArray, "\"typeIcon\":\"", "\",\"name\":");
+			this.name = Strings.getString(jsonArray, "\"name\":\"", "\",\"description\":\"");
+			this.description = Strings.getString(jsonArray, "\"description\":\"", "\",\"current\":");
+			this.currentPrice = Strings.getString(jsonArray, "current\":{\"trend\":\"neutral\",\"price\":", "},\"today\":{").replaceAll("\"", "");
 		}
 		
 		/**

@@ -34,7 +34,7 @@ public class SearchTab extends Tab implements KeyListener {
 		this.searchField = new JTextField("enter item name here.", 20);
 		this.searchField.setBounds(282, 10, 210, 15);
 		this.searchField.selectAll();
-		this.autoComplete = new AutoComplete(searchField);
+		this.autoComplete = new AutoComplete(searchField, ctx);
 		this.searchField.getDocument().addDocumentListener(autoComplete);
 		this.searchField.setToolTipText("Enter item name then press enter.");
 		this.searchField.addKeyListener(this);

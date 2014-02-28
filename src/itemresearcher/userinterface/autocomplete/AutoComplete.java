@@ -1,9 +1,9 @@
 package itemresearcher.userinterface.autocomplete;
 
+import itemresearcher.methods.ItemCache.CacheItem;
+import itemresearcher.methods.MethodContext;
+
 import java.awt.event.ActionEvent;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,27 +22,20 @@ public class AutoComplete implements DocumentListener {
 		COMPLETION
 	};
 	
-	private final String filePath = "/itemresearcher/userinterface/autocomplete/keywords/Keywords.txt";
 	private final JTextField textField;
-	private List<String> keywords;
+	private List<String> keywords = new ArrayList<>();
 	private Mode mode = Mode.INSERT;
 
-	public AutoComplete(JTextField textField) {
+	public AutoComplete(JTextField textField, MethodContext ctx) {
 		this.textField = textField;
-		this.loadKeywords();
+		this.loadKeywords(ctx);
 		Collections.sort(keywords);
 	}
-
-	private void loadKeywords() {
-		keywords = new ArrayList<>();
-		final BufferedReader in = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(filePath)));
-		String input;
-		try {
-			while ((input = in.readLine()) != null) {
-				keywords.add(input);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
+	
+	private void loadKeywords(MethodContext ctx) {
+		for (CacheItem item : ctx.itemCache.getCache()) {
+			System.out.println("added " + item.getName());
+			keywords.add(item.getName().toLowerCase());
 		}
 	}
 

@@ -12,13 +12,13 @@ public class MethodContext {
 	public final ImageCache imagePool;
 	public final FontLoader fontLoader;
 	public final GrandExchange grandExchange;
-	public final RunescapeWikia runescapeWikia;
+	public final ItemCache itemCache;
 
 	public MethodContext() {
 		this.imagePool = new ImageCache();
 		this.fontLoader = new FontLoader();
 		this.grandExchange = new GrandExchange(this);
-		this.runescapeWikia = new RunescapeWikia();
+		this.itemCache = new ItemCache();
 	}
 
 }
