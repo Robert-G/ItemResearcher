@@ -30,7 +30,9 @@ public class GrandExchange {
 	 */
 	public GEItem getItemOfTheWeek() {
 		if (itemOfTheWeek == -1) {
-			itemOfTheWeek = Integer.parseInt(IO.loadText(frontpageUrl, "<a class=\"HoverText\" href=\"").replaceAll("\\D", ""));
+			String inf = IO.loadText(frontpageUrl, "\">Item of the Week</a></h3>");
+			inf = inf.replace("<h3>", "").replace("</h3>", "");
+			itemOfTheWeek = Integer.parseInt(inf.replaceAll("\\D", ""));
 		}
 		return lookUpItem(itemOfTheWeek);
 	}
