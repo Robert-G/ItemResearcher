@@ -732,10 +732,10 @@
 {"Name":"Cake tin","Id":1887}
 {"Name":"Uncooked cake","Id":1889}
 {"Name":"Cake","Id":1891}
-{"Name":"2\/3 cake","Id":1893}
+{"Name":"2/3 cake","Id":1893}
 {"Name":"Slice of cake","Id":1895}
 {"Name":"Chocolate cake","Id":1897}
-{"Name":"2\/3 chocolate cake","Id":1899}
+{"Name":"2/3 chocolate cake","Id":1899}
 {"Name":"Chocolate slice","Id":1901}
 {"Name":"Grog","Id":1915}
 {"Name":"Bowl of water","Id":1921}
@@ -814,13 +814,13 @@
 {"Name":"Incomplete pizza","Id":2285}
 {"Name":"Uncooked pizza","Id":2287}
 {"Name":"Plain pizza","Id":2289}
-{"Name":"1\/2 plain pizza","Id":2291}
+{"Name":"1/2 plain pizza","Id":2291}
 {"Name":"Meat pizza","Id":2293}
-{"Name":"1\/2 meat pizza","Id":2295}
+{"Name":"1/2 meat pizza","Id":2295}
 {"Name":"Anchovy pizza","Id":2297}
-{"Name":"1\/2 anchovy pizza","Id":2299}
+{"Name":"1/2 anchovy pizza","Id":2299}
 {"Name":"Pineapple pizza","Id":2301}
-{"Name":"1\/2 p'apple pizza","Id":2303}
+{"Name":"1/2 p'apple pizza","Id":2303}
 {"Name":"Bread dough","Id":2307}
 {"Name":"Bread","Id":2309}
 {"Name":"Pie dish","Id":2313}
@@ -1444,26 +1444,26 @@
 {"Name":"Goutweed","Id":4182}
 {"Name":"New crystal bow","Id":4212}
 {"Name":"Crystal bow full","Id":4214}
-{"Name":"Crystal bow 9\/10","Id":4215}
-{"Name":"Crystal bow 8\/10","Id":4216}
-{"Name":"Crystal bow 7\/10","Id":4217}
-{"Name":"Crystal bow 6\/10","Id":4218}
-{"Name":"Crystal bow 5\/10","Id":4219}
-{"Name":"Crystal bow 4\/10","Id":4220}
-{"Name":"Crystal bow 3\/10","Id":4221}
-{"Name":"Crystal bow 2\/10","Id":4222}
-{"Name":"Crystal bow 1\/10","Id":4223}
+{"Name":"Crystal bow 9/10","Id":4215}
+{"Name":"Crystal bow 8/10","Id":4216}
+{"Name":"Crystal bow 7/10","Id":4217}
+{"Name":"Crystal bow 6/10","Id":4218}
+{"Name":"Crystal bow 5/10","Id":4219}
+{"Name":"Crystal bow 4/10","Id":4220}
+{"Name":"Crystal bow 3/10","Id":4221}
+{"Name":"Crystal bow 2/10","Id":4222}
+{"Name":"Crystal bow 1/10","Id":4223}
 {"Name":"New crystal shield","Id":4224}
 {"Name":"Crystal shield full","Id":4225}
-{"Name":"Crystal shield 9\/10","Id":4226}
-{"Name":"Crystal shield 8\/10","Id":4227}
-{"Name":"Crystal shield 7\/10","Id":4228}
-{"Name":"Crystal shield 6\/10","Id":4229}
-{"Name":"Crystal shield 5\/10","Id":4230}
-{"Name":"Crystal shield 4\/10","Id":4231}
-{"Name":"Crystal shield 3\/10","Id":4232}
-{"Name":"Crystal shield 2\/10","Id":4233}
-{"Name":"Crystal shield 1\/10","Id":4234}
+{"Name":"Crystal shield 9/10","Id":4226}
+{"Name":"Crystal shield 8/10","Id":4227}
+{"Name":"Crystal shield 7/10","Id":4228}
+{"Name":"Crystal shield 6/10","Id":4229}
+{"Name":"Crystal shield 5/10","Id":4230}
+{"Name":"Crystal shield 4/10","Id":4231}
+{"Name":"Crystal shield 3/10","Id":4232}
+{"Name":"Crystal shield 2/10","Id":4233}
+{"Name":"Crystal shield 1/10","Id":4234}
 {"Name":"Signed oak shieldbow","Id":4236}
 {"Name":"Nettle-water","Id":4237}
 {"Name":"Nettle tea","Id":4239}
@@ -3994,8 +3994,8 @@
 {"Name":"Beetle bits","Id":12127}
 {"Name":"Nuts","Id":12130}
 {"Name":"Evil turnip","Id":12134}
-{"Name":"2\/3 evil turnip","Id":12136}
-{"Name":"1\/3 evil turnip","Id":12138}
+{"Name":"2/3 evil turnip","Id":12136}
+{"Name":"1/3 evil turnip","Id":12138}
 {"Name":"Summoning potion (4)","Id":12140}
 {"Name":"Summoning potion (3)","Id":12142}
 {"Name":"Summoning potion (2)","Id":12144}
@@ -6272,11 +6272,11 @@
 {"Name":"Dragon plateskirt (sp)","Id":19344}
 {"Name":"Dragon sq shield (sp)","Id":19345}
 {"Name":"Dragon full helm ornament kit (or)","Id":19346}
-{"Name":"Dragon platelegs\/skirt ornament kit (or)","Id":19348}
+{"Name":"Dragon platelegs/skirt ornament kit (or)","Id":19348}
 {"Name":"Dragon platebody ornament kit (or)","Id":19350}
 {"Name":"Dragon sq shield ornament kit (or)","Id":19352}
 {"Name":"Dragon full helm ornament kit (sp)","Id":19354}
-{"Name":"Dragon platelegs\/skirt ornament kit (sp)","Id":19356}
+{"Name":"Dragon platelegs/skirt ornament kit (sp)","Id":19356}
 {"Name":"Dragon platebody ornament kit (sp)","Id":19358}
 {"Name":"Dragon sq shield ornament kit (sp)","Id":19360}
 {"Name":"Armadyl crozier","Id":19362}
