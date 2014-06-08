@@ -80,7 +80,8 @@ public class GrandExchange {
 	 */
 	public GEItem lookUpItem(String itemName) {
 		final CacheItem item = ctx.itemCache.loadCacheItem(itemName);
-		return item != null ? lookUpItem(item.getId()) : null;
+		int id = item != null ? item.getId() : ctx.wikia.getItemId(itemName);
+		return id > 0 ? lookUpItem(id) : null;
 	}
 	
 	public GEItem lookUpItem(Object object) {
